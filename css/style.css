@@ -1,0 +1,105 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --Red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+    --light-gray: hsl(0, 0%, 98%);
+    --grayish-blue: hsl(229, 6%, 66%);
+    --dark-blue: hsl(234, 12%, 34%);
+}
+
+body {
+    min-height: 100vh;
+    background-color: white;
+    font-size: 15px;
+    margin: 2rem 1.5rem;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+header p {
+    opacity: .8;
+    color: var(--grayish-blue);
+    /* letter-spacing: -1px; */
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: lighter;
+}
+
+h1 span {
+    color: var(--dark-blue);
+    font-weight: 600;
+}
+
+.cards-holder {
+    position: relative;
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.cards-holder .card {
+    background-color: white;
+    box-shadow: 0px 5px 15px var(--grayish-blue);
+    padding: 30px;
+    width: 350px;
+    border-radius: 5px;
+}
+.cards-holder .card h2{
+color: var(--dark-blue);
+}
+.cards-holder .card  p{
+color: var(--grayish-blue);
+margin-top: 10px;
+}
+.cards-holder .col .card img{
+    margin:35px 0 0 auto;
+}
+.cards-holder .col:first-child .card{
+    border-top: 5px solid var(--cyan);
+    margin-right: 40px;
+}
+.cards-holder .col:nth-child(2) .card:nth-child(1){
+    margin-bottom:30px;
+    border-top: 5px solid var(--Red);
+}
+.cards-holder .col:nth-child(2) .card:nth-child(2) {
+    border-top: 5px solid var(--orange);
+}
+
+.cards-holder .col:nth-child(3) .card {
+    border-top: 5px solid var(--blue);
+    margin-left: 40px;
+}
+@media (max-width:767px) {
+    .cards-holder{
+    flex-direction: column;
+    }
+    .cards-holder .col:first-child .card{
+    margin-right: 0;
+    }
+    .cards-holder .col:nth-child(3) .card{
+    margin-left: 0;
+    }
+    .cards-holder .col .card{
+    margin-bottom: 20px;
+    }
+}
